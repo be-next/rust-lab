@@ -10,7 +10,7 @@ Instead of relying on traditional exceptions, Rust enforces clear error propagat
 
 - [Error handling in official Rust documentation](https://doc.rust-lang.org/book/ch09-00-error-handling.html): because everything starts by RTFM!
 - [Andrew Gallant's blog post on Error handling in Rust](https://blog.burntsushi.net/rust-error-handling/): there is a lot to learn to master error handling in Rust, this blog post is a good journey to visit Rust fondamentals trough the lens of error handling.
-- [Rust Error Handling - Best Practices by Jeremy Chone](https://youtu.be/j-VQCYP7wyw?si=Q45S0mL70encWG1E): agumented and experienced view on error handling in Rust brilliantly presented by Jeremy Chone.
+- [Rust Error Handling - Best Practices by Jeremy Chone](https://rust10x.com/best-practices/error-handling): agumented and experienced view on error handling in Rust brilliantly presented (youtube video bellow).
 
 <p align="center">
   <a href="https://www.youtube.com/watch?v=j-VQCYP7wyw">
