@@ -46,3 +46,35 @@ fn main() {
         Err(e) => eprintln!("Error: {}", e),
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_calculate_inverse_nominal() {
+        let result = calculate_inverse("10");
+        assert!(result.is_ok());
+        assert_eq!(result.unwrap(), 0.1);
+    }
+
+    #[test]
+    fn test_calculate_inverse_division_by_zero() {
+        let result = calculate_inverse("0");
+        assert!(result.is_err());
+        assert!(matches!(
+            result.unwrap_err(),
+            CalculationError::DivisionByZero
+        ));
+    }
+
+    #[test]
+    fn test_calculate_inverse_parse_error() {
+        let result = calculate_inverse("abc");
+        assert!(result.is_err());
+        assert!(matches!(
+            result.unwrap_err(),
+            CalculationError::ParseError(_)
+        ));
+    }
+}
