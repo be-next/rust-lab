@@ -10,6 +10,7 @@ All experimentations are documented in the `topics` directory, organized by topi
 
 - [Error Handling in Rust](topics/rust-error-handling/README.md)
 - [Smart Pointers in Rust](topics/rust-smart-pointers/README.md)
+- [Concurrent programming in Rust](topics/rust-concurrent-programming/README.md)
 
 ## Utilities
 
