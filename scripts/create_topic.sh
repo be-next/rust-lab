@@ -34,38 +34,38 @@ fi
 # Argument validation
 # ==============================
 if [ -z "$1" ]; then
-    echo "❌ Error: You must provide an experiment name."
-    echo "Usage: ./create_experiment.sh <experiment_name>"
+    echo "❌ Error: You must provide an topic name."
+    echo "Usage: ./create_topic.sh <topic_name>"
     exit 1
 fi
 
-EXPERIMENT_NAME=$1
-EXP_DIR="$TOPICS_DIR/$EXPERIMENT_NAME"
+TOPIC_NAME=$1
+EXP_DIR="$TOPICS_DIR/$TOPIC_NAME"
 
-# Check if the experiment name is valid (only letters, numbers, and dashes)
-if [[ ! "$EXPERIMENT_NAME" =~ ^[a-zA-Z0-9_-]+$ ]]; then
-    echo "❌ Error: The experiment name must contain only letters, numbers, and dashes (-)."
+# Check if the topic name is valid (only letters, numbers, and dashes)
+if [[ ! "$TOPIC_NAME" =~ ^[a-zA-Z0-9_-]+$ ]]; then
+    echo "❌ Error: The topic name must contain only letters, numbers, and dashes (-)."
     exit 1
 fi
 
-# Check if the experiment name is reserved
+# Check if the topic name is reserved
 for RESERVED in "${RESERVED_NAMES[@]}"; do
-    if [[ "$EXPERIMENT_NAME" == "$RESERVED" ]]; then
-        echo "❌ Error: '$EXPERIMENT_NAME' is a reserved name and cannot be used."
+    if [[ "$TOPIC_NAME" == "$RESERVED" ]]; then
+        echo "❌ Error: '$TOPIC_NAME' is a reserved name and cannot be used."
         exit 1
     fi
 done
 
 # Check if the project already exists
 if [ -d "$EXP_DIR" ]; then
-    echo "⚠️ Warning: The experiment '$EXPERIMENT_NAME' already exists."
+    echo "⚠️ Warning: The topic '$TOPIC_NAME' already exists."
     exit 0
 fi
 
 # ==============================
 # Create the Cargo project
 # ==============================
-echo "📂 Creating experiment: $EXPERIMENT_NAME"
+echo "📂 Creating topic: $TOPIC_NAME"
 cargo new --vcs none "$EXP_DIR"
 
 # Create `examples/` and `tests/` subdirectories
@@ -87,5 +87,5 @@ fn it_works() {
 }
 EOL
 
-echo "✅ Experiment '$EXPERIMENT_NAME' successfully created and added to the workspace!"
+echo "✅ topic '$TOPIC_NAME' successfully created and added to the workspace!"
 exit 0
