@@ -8,9 +8,9 @@ All experimentations are documented in the `topics` directory, organized by topi
 
 ## Topics
 
-- [Error Handling in Rust](topics/rust-error-handling/README.md)
-- [Smart Pointers in Rust](topics/rust-smart-pointers/README.md)
-- [Concurrent programming in Rust](topics/rust-concurrent-programming/README.md)
+- [Error Handling in Rust](topics/rust-error-handling/README.md): different ways to handle errors in Rust. From native error handling to custom error types.
+- [Smart Pointers in Rust](topics/rust-smart-pointers/README.md): a taxonomy of smart pointers in Rust and examples of their usage.
+- [Concurrent programming in Rust](topics/rust-concurrent-programming/README.md): some examples and exploration of concurrent programming in Rust (huge topic!).
 
 ## Utilities
 
