@@ -7,4 +7,10 @@ edition = "2021"
 
 
 [workspace]
-members = [ "topics/rust-concurrent-programming","topics/rust-error-handling", "topics/rust-ownership-references-borrowing", "topics/rust-smart-pointers"]
+members = [
+    "topics/crate-axum-opentelemetry",
+    "topics/rust-concurrent-programming",
+    "topics/rust-error-handling",
+    "topics/rust-ownership-references-borrowing",
+    "topics/rust-smart-pointers",
+]
