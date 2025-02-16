@@ -8,6 +8,7 @@ All experimentations are documented in the `topics` directory, organized by topi
 
 ## Topics
 
+- [Ownership, References and Borrowing in Rust](topics/rust-ownership-references-borrowing/README.md): the core concepts of Rust's memory management system.
 - [Error Handling in Rust](topics/rust-error-handling/README.md): different ways to handle errors in Rust. From native error handling to custom error types.
 - [Smart Pointers in Rust](topics/rust-smart-pointers/README.md): a taxonomy of smart pointers in Rust and examples of their usage.
 - [Concurrent programming in Rust](topics/rust-concurrent-programming/README.md): some examples and exploration of concurrent programming in Rust (huge topic!).
