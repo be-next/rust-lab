@@ -49,7 +49,6 @@ cargo outdated
 
 [`cargo upgrade`](https://crates.io/crates/cargo-edit) is a tool to help you keep your Rust projects up-to-date. It can automatically update your `Cargo.toml` file with the latest versions of your dependencies.
 
-[!NOTE]
 To install `cargo-edit`, run the following command:
 
 ```bash
@@ -62,9 +61,9 @@ To update the dependencies in `Cargo.toml` file, run the following command:
 cargo upgrade
 ```
 
-[!WARNING]
-To force update the dependencies (while major update or breaking change), run the following command:
-
-```bash
-cargo upgrade --incompatible
-```
+> [!IMPORTANT]
+> To force update the dependencies (while major update or breaking change), run the following command:
+>
+>```bash
+>cargo upgrade --incompatible
+>```
