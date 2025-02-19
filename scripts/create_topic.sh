@@ -8,7 +8,7 @@ TOPICS_DIR="./topics"
 CARGO_TOML="./Cargo.toml"
 
 # List of reserved names (Cargo keywords, system directories, etc.)
-RESERVED_NAMES=("test" "tests" "src" "target" "examples" "benchmarks" "bin" "lib" "core" "cargo")
+RESERVED_NAMES=("test" "tests" "src" "target" "examples" "benchmarks" "benches" "bin" "lib" "core" "cargo")
 
 # ==============================
 # Check execution context
