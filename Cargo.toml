@@ -7,7 +7,7 @@ edition = "2021"
 
 
 [workspace]
-members = [
+members = [ "topics/cargo-bench",
     "topics/crate-axum-opentelemetry",
     "topics/rust-concurrent-programming",
     "topics/rust-error-handling",
