@@ -19,7 +19,11 @@ All experimentations are documented in the `topics` directory, organized by topi
 
 - [axum and opentelemetry](topics/crate-axum-opentelemetry/README.md): an example of how to use `axum` and `opentelemetry` together. Traces are visualized in Jaeger.
 
-## Utilities
+### Tools
+
+- [`cargo bench` and Criterion](topics/cargo-bench/README.md): how to use `cargo bench` and `Criterion` to write and run benchmarks in Rust.
+
+## Miscellaneus
 
 ### Bacon
 
