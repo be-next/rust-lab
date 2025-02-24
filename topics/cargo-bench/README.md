@@ -2,6 +2,21 @@
 
 `cargo bench` is a command in Rust’s package manager, **Cargo**, that runs performance benchmarks on Rust code. It relies on the `criterion` library to provide precise measurements.
 
+<figure align="center">
+    <p width="100%">
+        <img
+            src="doc/assets/bench_fib20-01.png"
+            alt="Bench report example">
+        <figcaption>Bench report example</figcaption>
+    </p>
+</figure>
+
+## Bench with or without Criterion?
+
+`cargo bench` is an integrated feature of Cargo that allows you to run tests on Rust code. However, it does not provide detailed statistics or graphs for analysing code performance. What's more, this functionality is only available in the nightly version of Rust.
+
+This is why the `criterion` library is generally used, which provides detailed statistics and graphs to help analyse the performance of Rust code.
+
 ## ⚙️ Prerequisites: Enabling Benchmarking in Rust
 
 To use `cargo bench`, you need to enable the `benches` feature in your `Cargo.toml` file. This feature is disabled by default. To enable it, add the following line to your `Cargo.toml` file:
