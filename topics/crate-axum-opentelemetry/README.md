@@ -17,7 +17,7 @@ This code is masively inspired by this video: [Rust Axum and OpenTelemetry](http
 ### 1. Start Jaeger
 
 ```bash
-dockercompose up
+docker compose up
 ```
 
 ### 2. Start the server
