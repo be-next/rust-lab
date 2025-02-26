@@ -35,3 +35,7 @@ curl -X GET http://localhost:3000/health
 ### 4. Open Jaeger
 
 Open your browser and go to [http://localhost:16686/](http://localhost:16686/)
+
+## Todo
+
+Create client to send requests to the server and visualize the traces in Jaeger.
