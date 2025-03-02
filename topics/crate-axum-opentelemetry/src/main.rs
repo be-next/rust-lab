@@ -1,19 +1,16 @@
 mod open_telemetry;
 
-use crate::open_telemetry::init_trace;
+use crate::open_telemetry::init_tracing_subscriber;
 use axum::http::StatusCode;
 use axum::routing::get;
 use axum::Router;
-use opentelemetry::global;
-use opentelemetry::sdk::propagation::TraceContextPropagator;
+// use axum_tracing_opentelemetry::middleware::OtelAxumLayer;
+// use axum_tracing_opentelemetry::middleware::OtelInResponseLayer;
 use opentelemetry::trace::TraceError;
 use rand::Rng;
 use tracing::{error, event, info, warn, Level};
-use tracing_subscriber::layer::SubscriberExt;
 
-// OpenTelemetry Setup in RUST
-
-#[tracing::instrument]
+#[tracing::instrument(name = "health_handler", level = "info")]
 async fn health_handler() -> StatusCode {
     let number = rand::rng().random_range(1..4);
     match number {
@@ -39,23 +36,18 @@ async fn health_handler() -> StatusCode {
 #[tokio::main]
 #[tracing::instrument]
 async fn main() -> Result<(), TraceError> {
-    global::set_text_map_propagator(TraceContextPropagator::new());
-    let tracer = init_trace().unwrap();
-    let telemetry = tracing_opentelemetry::layer().with_tracer(tracer);
-    let subscriber = tracing_subscriber::Registry::default().with(telemetry);
-    tracing::subscriber::set_global_default(subscriber).unwrap();
+    let _guard = init_tracing_subscriber();
 
     let router = Router::new().route("/health", get(health_handler));
-
+    // .layer(OtelInResponseLayer::default())
+    // .layer(OtelAxumLayer::default());
     let listener = tokio::net::TcpListener::bind("0.0.0.0:3000").await.unwrap();
-
-    println!("App is running..");
     info!("App is running...");
-    let result = axum::serve(listener, router).await;
+    let result = axum::serve(listener, router.into_make_service()).await;
 
     if let Err(_) = result {
         error!("Application is dying...");
-        global::shutdown_tracer_provider();
+        // tracer_provider.shutdown().unwrap();
     }
     Ok(())
 }
