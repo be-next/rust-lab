@@ -5,9 +5,9 @@ edition = "2021"
 
 [dependencies]
 
-
 [workspace]
-members = [ "topics/cargo-bench",
+members = [
+    "topics/cargo-bench",
     "topics/crate-axum-opentelemetry",
     "topics/rust-concurrent-programming",
     "topics/rust-error-handling",

@@ -1,17 +1,33 @@
 [package]
 name = "crate-axum-opentelemetry"
-version = "0.1.0"
+version = "0.1.2"
 edition = "2021"
 
 [dependencies]
-axum = "0.7.9"
+axum = "0.8.1"
+axum-tracing-opentelemetry = "0.26.1"
 tokio = { version = "1.43.0", features = ["full"] }
 rand = "0.9.0"
 
 
-opentelemetry = { version = "0.19.0", features = ["rt-tokio", "trace"] }
-opentelemetry-otlp = { version = "0.12.0", features = ["tonic", "metrics"] }
-opentelemetry-semantic-conventions = { version = "0.11.0" }
+opentelemetry = { version = "0.28.0", features = [
+    "trace",
+    "metrics",
+    "logs",
+    "internal-logs",
+] }
+opentelemetry-otlp = { version = "0.28.0", features = [
+    "grpc-tonic",
+    "metrics",
+    "trace",
+    "logs",
+] }
+opentelemetry-semantic-conventions = { version = "0.28.0", features = [
+    "semconv_experimental",
+] }
 tracing = "0.1.41"
-tracing-opentelemetry = "0.19.0"
+tracing-opentelemetry = "0.29.0"
 tracing-subscriber = { version = "0.3.19" }
+# New dependencie for otlp sdk
+opentelemetry_sdk = { version = "0.28.0", features = ["rt-tokio"] }
+tracing-core = "0.1.33"
