@@ -15,3 +15,7 @@ harness = false       # Disables the default test harness to use Criterion
 [[bench]]
 name = "fib_benchmark"
 harness = false
+
+[[bench]]
+name = "fib_benchmark_v02"
+harness = false
