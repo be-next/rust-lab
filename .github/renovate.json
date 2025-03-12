@@ -2,6 +2,9 @@
     "extends": [
         "config:best-practices"
     ],
+    "enabledManagers": [
+        "cargo"
+    ],
     "packageRules": [
         {
             "managers": [
@@ -15,5 +18,14 @@
                 "at any time"
             ]
         }
-    ]
+    ],
+    "rust": {
+        "enabled": true
+    },
+    "autodiscover": true,
+    "autodiscoverFilter": [
+        "rust-lab/**"
+    ],
+    "ignorePaths": [],
+    "rangeStrategy": "bump"
 }
