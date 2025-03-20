@@ -7,21 +7,24 @@
     ],
     "packageRules": [
         {
-            "managers": [
-                "cargo"
+            "matchCategories": [
+                "rust"
             ],
-            "packagePatterns": [
-                "*"
+            "enabled": true
+        },
+        {
+            "matchManagers": [
+                "cargo"
             ],
             "groupName": "all dependencies",
             "schedule": [
                 "at any time"
+            ],
+            "matchPackageNames": [
+                "*"
             ]
         }
     ],
-    "rust": {
-        "enabled": true
-    },
     "autodiscover": true,
     "autodiscoverFilter": [
         "rust-lab/**"
