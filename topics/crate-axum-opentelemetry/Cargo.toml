@@ -6,7 +6,7 @@ edition = "2021"
 [dependencies]
 axum = "0.8.4"
 axum-tracing-opentelemetry = "0.28.0"
-tokio = { version = "1.44.2", features = ["full"] }
+tokio = { version = "1.45.0", features = ["full"] }
 rand = "0.9.1"
 
 
