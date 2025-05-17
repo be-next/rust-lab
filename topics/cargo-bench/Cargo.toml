@@ -6,7 +6,7 @@ edition = "2024"
 [dependencies]
 
 [dev-dependencies]
-criterion = "=0.5.1" # or a more recent version
+criterion = "=0.6.0" # or a more recent version
 
 [[bench]]
 name = "my_benchmark"
