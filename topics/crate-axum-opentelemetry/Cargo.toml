@@ -30,4 +30,4 @@ tracing-opentelemetry = "0.31.0"
 tracing-subscriber = { version = "0.3.19" }
 # New dependencie for otlp sdk
 opentelemetry_sdk = { version = "0.30.0", features = ["rt-tokio"] }
-tracing-core = "0.1.33"
+tracing-core = "0.1.34"
