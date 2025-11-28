@@ -25,9 +25,9 @@ opentelemetry-otlp = { version = "0.31.0", features = [
 opentelemetry-semantic-conventions = { version = "0.31.0", features = [
     "semconv_experimental",
 ] }
-tracing = "0.1.41"
+tracing = "0.1.43"
 tracing-opentelemetry = "0.32.0"
-tracing-subscriber = { version = "0.3.20" }
+tracing-subscriber = { version = "0.3.22" }
 # New dependencie for otlp sdk
 opentelemetry_sdk = { version = "0.31.0", features = ["rt-tokio"] }
 tracing-core = "0.1.35"
