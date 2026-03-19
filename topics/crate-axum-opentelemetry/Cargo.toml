@@ -16,7 +16,7 @@ opentelemetry = { version = "0.31.0", features = [
     "logs",
     "internal-logs",
 ] }
-opentelemetry-otlp = { version = "0.31.0", features = [
+opentelemetry-otlp = { version = "0.31.1", features = [
     "grpc-tonic",
     "metrics",
     "trace",
