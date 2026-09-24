@@ -7,27 +7,27 @@ edition = "2021"
 axum = "0.8.9"
 axum-tracing-opentelemetry = "0.39.1"
 tokio = { version = "1.53.1", features = ["full"] }
-rand = "0.10.2"
+rand = "0.10.3"
 
 
-opentelemetry = { version = "0.32.0", features = [
+opentelemetry = { version = "0.33.0", features = [
     "trace",
     "metrics",
     "logs",
     "internal-logs",
 ] }
-opentelemetry-otlp = { version = "0.32.0", features = [
+opentelemetry-otlp = { version = "0.33.0", features = [
     "grpc-tonic",
     "metrics",
     "trace",
     "logs",
 ] }
-opentelemetry-semantic-conventions = { version = "0.32.1", features = [
+opentelemetry-semantic-conventions = { version = "0.33.0", features = [
     "semconv_experimental",
 ] }
 tracing = "0.1.44"
-tracing-opentelemetry = "0.33.0"
+tracing-opentelemetry = "0.34.0"
 tracing-subscriber = { version = "0.3.23" }
 # New dependencie for otlp sdk
-opentelemetry_sdk = { version = "0.32.1", features = ["rt-tokio"] }
+opentelemetry_sdk = { version = "0.33.0", features = ["rt-tokio"] }
 tracing-core = "0.1.36"
