@@ -7,7 +7,7 @@ edition = "2021"
 axum = "0.8.9"
 axum-tracing-opentelemetry = "0.42.1"
 tokio = { version = "1.54.0", features = ["full"] }
-rand = "0.10.3"
+rand = "0.10.4"
 
 
 opentelemetry = { version = "0.33.1", features = [
